@@ -1,0 +1,10 @@
+{
+  "hooks": {
+    "preToolUse": [
+      {
+        "matcher": "edit|write",
+        "command": "powershell -ExecutionPolicy Bypass -File .github/hooks/validate.ps1"
+      }
+    ]
+  }
+}
