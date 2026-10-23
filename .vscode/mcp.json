@@ -1,0 +1,10 @@
+{
+  "servers": {
+    "cityops-prime": {
+      "command": "python",
+      "args": [
+        ".github/mcp/server.py"
+      ]
+    }
+  }
+}
