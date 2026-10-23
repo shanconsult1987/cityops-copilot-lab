@@ -21,11 +21,24 @@ python app.py
 
 ## Tests
 
-Run the unit tests using Python's built-in test runner (no extra dependencies):
+Run the unit tests from the repository root using Python's built-in test runner
+(no extra dependencies):
 
 ```powershell
-python -m unittest discover -s tests -v
+python -m unittest discover -s tests -t . -v
 ```
+
+The `tests` package also supports default discovery from the repository root:
+
+```powershell
+python -m unittest discover -v
+```
+
+VS Code workspace settings use the repository root as the test working directory
+and import root. After changing test settings, run **Test: Refresh Tests** in the
+Command Palette. Running discovery from inside `tests` without specifying the
+repository as the top-level directory can cause `ModuleNotFoundError: No module
+named 'app'`.
 
 ## Line coverage
 
