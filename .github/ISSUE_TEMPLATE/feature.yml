@@ -1,0 +1,72 @@
+name: Feature Request
+description: Request a new CityOps feature or capability
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## CityOps Feature Request
+
+        Describe the feature clearly. The Copilot development agent will use this issue as the implementation specification.
+
+  - type: textarea
+    id: requirement
+    attributes:
+      label: Requirement
+      description: What needs to be implemented?
+      placeholder: |
+        Add a function called get_open_incidents().
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: What must be true for this feature to be considered complete?
+      value: |
+        - Only open incidents are returned.
+        - Closed incidents are excluded.
+        - Unit tests are added.
+        - All tests pass.
+        - Documentation is updated.
+        - A pull request is created.
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing
+    attributes:
+      label: Testing Requirements
+      description: How should the change be validated?
+      value: |
+        Run:
+
+        python -m unittest discover -s tests -v
+
+        All tests must pass before the pull request is considered ready.
+    validations:
+      required: true
+
+  - type: textarea
+    id: documentation
+    attributes:
+      label: Documentation
+      description: What documentation needs to be updated?
+      placeholder: |
+        Update README.md with usage information for get_open_incidents().
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: agent
+    attributes:
+      label: Agent Workflow
+      options:
+        - label: Implement the change
+        - label: Add unit tests
+        - label: Run all tests
+        - label: Update documentation
+        - label: Create a pull request
